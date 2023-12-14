@@ -15,6 +15,10 @@ class Stack {
                 top = -1;
         }
 
+        ~Stack(){
+            delete [] arr;
+            cout<<"stack destroyed"<<endl;
+        }
         //functions
          
         void push(int data) {
@@ -87,6 +91,10 @@ int main() {
   cout << "Size of stack " << s.getSize() << endl;
 
   s.pop();
-
+ 
+  Stack *st = new Stack (4);
+  delete st;
+  //An anonymous object, also known as an unnamed or inline object, is an object in programming that is created without assigning it a name
+  // Stack(5).push;
   return 0;
 }
